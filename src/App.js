@@ -1,4 +1,3 @@
-import { useEffect, useReducer } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
@@ -19,7 +18,7 @@ export default function APP() {
       <Header />
       <Main>
         {status === "loading" && <Loader />}
-        {status === "Error" && <Error />}
+        {status === "error" && <Error />}
         {status === "ready" && <StartScreen />}
         {status === "active" && (
           <>
